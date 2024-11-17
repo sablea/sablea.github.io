@@ -16,7 +16,7 @@
 <meta property="og:description" content="使用云服务器进行内网穿透以腾讯云服务器,frp软件为例 目的使非内网环境用户能够使用ssh连接访问到服务器。 事前准备frp软件，可在此处链接进行下载。下载最新版的即可，例如：frp_0.58.1_linux_amd64.tar.gz，注意文件名的字段一般包含linux和amd64。本节也以该文件名为例进行演示。 一个公网服务器，可以在阿里云&#x2F;华为云&#x2F;腾讯云等云服务器产品商处购">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2024-11-05T15:01:07.000Z">
-<meta property="article:modified_time" content="2024-11-05T15:01:28.259Z">
+<meta property="article:modified_time" content="2024-11-17T14:22:04.839Z">
 <meta property="article:author" content="sablea">
 <meta name="twitter:card" content="summary">
   
@@ -189,7 +189,7 @@
 <p>压缩包内通常包含以下5个文件：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">frpc  frpc.toml   frps   frps.toml   LICENSE</span><br></pre></td></tr></table></figure>
 
-<p>LICENSE不用管，<strong>其余文件名中，带字母c的表示客户端（client），应该在139服务器上进行运行。带s的表示服务端(server),应该在公网服务器上进行运行。</strong></p>
+<p>LICENSE不用管，<strong>其余文件名中，带字母c的表示客户端（client），应该在本地的内网服务器上进行运行。带s的表示服务端(server),应该在公网服务器上进行运行。</strong></p>
 <p>.toml为配置文件，按照以下方式进行配置<br><strong>服务端配置：</strong></p>
 <p>编辑frps.toml文件，可使用vim或nano等文本编辑器进行编辑，具体怎么编辑可自行搜索教程。</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bindPort = 7777 <span class="comment">#其中7777为与客户端进行绑定的端口，可任意指定，不与现有软件端口冲突了就好</span></span><br></pre></td></tr></table></figure>
@@ -202,7 +202,7 @@
 <p>远程连接到公网服务器上，运行指令：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 前台启动</span></span><br><span class="line">./frps -c ./frps.ini   </span><br><span class="line"> </span><br><span class="line"><span class="comment"># 后台启动（正常使用后推荐后台启动）</span></span><br><span class="line"><span class="built_in">nohup</span> ./frps -c ./frps.ini &amp;</span><br></pre></td></tr></table></figure>
 
-<p>远程连接到139服务器上，运行指令。</p>
+<p>远程连接到内网服务器上，运行指令。</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 前台启动</span></span><br><span class="line">./frpc -c ./frpc.ini   </span><br><span class="line"> </span><br><span class="line"><span class="comment"># 后台启动（正常使用后推荐后台启动）</span></span><br><span class="line"><span class="built_in">nohup</span> ./frpc -c ./frpc.ini &amp;</span><br></pre></td></tr></table></figure>
 
 <p>使用公网ip连接到内网服务器，例如：</p>
