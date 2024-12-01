@@ -156,6 +156,109 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-Lora论文阅读" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2024/12/01/Lora%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/">Lora论文阅读</a>
+    </h1>
+  
+
+        
+        <a href="/2024/12/01/Lora%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/" class="archive-article-date">
+  	<time datetime="2024-12-01T14:12:16.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2024-12-01</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="Lora论文阅读"><a href="#Lora论文阅读" class="headerlink" title="Lora论文阅读"></a>Lora论文阅读</h1><p><a target="_blank" rel="noopener" href="https://arxiv.org/pdf/2106.09685">原始论文链接</a></p>
+<h2 id="Lora的背景思路："><a href="#Lora的背景思路：" class="headerlink" title="Lora的背景思路："></a>Lora的背景思路：</h2><p>深度学习的矩阵往往是过参数化的（over-parametrized），大模型的权重拥有某种内在维度（<a target="_blank" rel="noopener" href="https://arxiv.org/pdf/2012.13255">intrinsic dimension</a>）。它表示模型权重中存在的有效信息的维度。</p>
+<p>实际上许多问题的内在维度比人们认为的要小的多，而对于某个数据集，内在维度在不同参数量级的模型上差距并不大。这个内在维度指的是我们解决这个问题实际上需要的参数空间的维度，我们对模型的微调通常调整的也是这些低秩的内在维度。</p>
+<p>因此：</p>
+<p><em><strong>“一个过参数的模型的参数空间是有压缩的空间的</strong></em>”</p>
+<p>也就是说只需一个低维的参数即可保证大模型对下游任务的适应，相当一部分参数是冗余的。</p>
+<p>研发一个使用低维参数矩阵即可微调模型的方法，因此取名Low-Rank Adaptation（低秩适应）。</p>
+<h2 id="该论文想解决的问题"><a href="#该论文想解决的问题" class="headerlink" title="该论文想解决的问题"></a>该论文想解决的问题</h2><p>大论文的fine-tuning，对这一方向提出了自己的解决方案。</p>
+<p>过去的方案是<strong>提示学习</strong> （Prompt Learning）和 <strong>适配器学习</strong> （Adapter Learning）。提示学习的问题是模型的效果对提示的依赖非常严重，无论是离散提示还是连续提示，提示怎么有效的构造永远是提示学习的一个痛点。另外对于适配器学习来说，它们一般会向网络层中插入一些可学习的模块，同时这也带来了推理时间的增加。</p>
+<h2 id="Lora的做法"><a href="#Lora的做法" class="headerlink" title="Lora的做法"></a>Lora的做法</h2><p>LoRA的做法是在LLM的某些矩阵（ $W\in\mathbb{R}^{d\times k}$ ）旁插入一个和它并行的新的权值矩阵 $\Delta\boldsymbol{W}\in\mathbb{R}^{d\times k}$ ，但是因为模型的低秩性的存在，我们可以将 $\Delta\boldsymbol{W}$ 拆分成降维矩阵 $\boldsymbol{A}\in\mathbb{R}^{r\times k}$和升维矩阵 $\boldsymbol{B}\in\mathbb{R}^{d\times r}$（图1），其中 r≪min(d,k) ，从而实现了以极小的参数数量训练LLM。在训练时，我们将LLM的参数固定，只训练矩阵 A 和 B 。根据以下公式，在模型训练完成之后，我们可以直接将 A 和 B 加到原参数上，从而在推理时不会产生额外的推理时延。</p>
+<p>$$<br>\boldsymbol{h}&#x3D;\boldsymbol{W}_0\boldsymbol{x}+\Delta\boldsymbol{Wx}&#x3D;(\boldsymbol{W}_0+\Delta\boldsymbol{W})\boldsymbol{x}&#x3D;\boldsymbol{Wx}+\boldsymbol{BAx}<br>$$</p>
+<p><img src="/./Lora%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/image.png" alt="图1 Lora网络结构"></p>
+<h2 id="LORA对比其他的优势"><a href="#LORA对比其他的优势" class="headerlink" title="LORA对比其他的优势"></a>LORA对比其他的优势</h2><p>无时延</p>
+<p>与现有方法不冲突</p>
+<p>一个预训练模型可以用来针对不同任务建立为很多小的LoRA模块。我们可以冻结共享模型，仅仅通过更换图1中的A，B矩阵来快速地切换任务，从而显著降低存储需求和任务切换开销。</p>
+<h2 id="阅读时我的疑问"><a href="#阅读时我的疑问" class="headerlink" title="阅读时我的疑问"></a>阅读时我的疑问</h2><p>这里alpha和r是超参数吗？是的，就是指定的超参数，r为矩阵的秩。</p>
+<p>它是一个缩放参数，通常是一个常数。通过设置 α 有助于在变化 r 时减少重新调整超参数的需求。</p>
+<blockquote>
+<p>我们对A矩阵使用随机高斯初始化，对B矩阵初始化为零，因此在训练开始时∆W &#x3D; BA为零。然后，我们给∆Wx乘以α&#x2F;r的系数，其中α是r中的一个常数。当使用Adam法优化时，如果我们调整了合理的初始值，调整α大致上等同于调整学习率。因此，我们简单地将α设置为我们尝试的第一个r，并且不再对它进行调整。这种调整有助于减少在我们改变r时重新调整超参的需求（Yang &amp; Hu, 2021）。</p>
+</blockquote>
+<p>什么是累计梯度更新？accumulated gradient update（感觉这问题不太重要）</p>
+<blockquote>
+<p>LoRA takes a step further and does not require the accumulated gradient update to weight matrices to have full-rank during adaptation.</p>
+<p>LoRA更进一步，不要求在适配过程中权重矩阵的累积梯度更新具有完全秩。</p>
+</blockquote>
+<p>这个很好理解，作者在说明基于适配器的方法随着参数增加，其实就是在训练一个MLP</p>
+<blockquote>
+<p>In other words, as we increase the number of trainable parameters, training LoRA roughly converges to training the original model, while adapter-based methods converges to an MLP and prefix-based methods to a model that cannot take long input sequences.</p>
+<p>换句话说，随着我们增加可训练参数的数量，训练LoRA大致上类似于训练原始模型，如果基于适配器的方法类似于一个MLP方法，以及基于前缀的方法类似于一个不能处理长输入序列的模型。</p>
+</blockquote>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">论文阅读</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2024/12/01/Lora%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-使用云服务进行内网穿透" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -426,6 +529,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
             <input type="checkbox" q-on="click:toggleTag(e)" q-attr="checked:showTags">
           </label>
           <ul class="article-tag-list" q-show="showTags">
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">论文阅读</a>
+              </li>
             
             <div class="clearfix"></div>
           </ul>
