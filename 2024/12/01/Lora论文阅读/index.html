@@ -5,23 +5,23 @@
   
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <link rel="dns-prefetch" href="http://example.com">
+  <link rel="dns-prefetch" href="https://sablea.github.io">
   <title>Lora论文阅读 | sablea&#39;s blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="Lora论文阅读原始论文链接 Lora的背景思路：深度学习的矩阵往往是过参数化的（over-parametrized），大模型的权重拥有某种内在维度（intrinsic dimension）。它表示模型权重中存在的有效信息的维度。 实际上许多问题的内在维度比人们认为的要小的多，而对于某个数据集，内在维度在不同参数量级的模型上差距并不大。这个内在维度指的是我们解决这个问题实际上需要的参数空间的维度，">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Lora论文阅读">
-<meta property="og:url" content="http://example.com/2024/12/01/Lora%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/index.html">
+<meta property="og:url" content="https://sablea.github.io/2024/12/01/Lora%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/index.html">
 <meta property="og:site_name" content="sablea&#39;s blog">
 <meta property="og:description" content="Lora论文阅读原始论文链接 Lora的背景思路：深度学习的矩阵往往是过参数化的（over-parametrized），大模型的权重拥有某种内在维度（intrinsic dimension）。它表示模型权重中存在的有效信息的维度。 实际上许多问题的内在维度比人们认为的要小的多，而对于某个数据集，内在维度在不同参数量级的模型上差距并不大。这个内在维度指的是我们解决这个问题实际上需要的参数空间的维度，">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="http://example.com/.com//lora.png">
+<meta property="og:image" content="https://sablea.github.io/.io//lora.png">
 <meta property="article:published_time" content="2024-12-01T14:12:16.000Z">
-<meta property="article:modified_time" content="2024-12-01T14:42:26.443Z">
+<meta property="article:modified_time" content="2024-12-01T14:55:01.758Z">
 <meta property="article:author" content="sablea">
 <meta property="article:tag" content="论文阅读">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://example.com/.com//lora.png">
+<meta name="twitter:image" content="https://sablea.github.io/.io//lora.png">
   
     <link rel="alternative" href="/atom.xml" title="sablea&#39;s blog" type="application/atom+xml">
   
@@ -192,7 +192,7 @@
 <p>过去的方案是<strong>提示学习</strong> （Prompt Learning）和 <strong>适配器学习</strong> （Adapter Learning）。提示学习的问题是模型的效果对提示的依赖非常严重，无论是离散提示还是连续提示，提示怎么有效的构造永远是提示学习的一个痛点。另外对于适配器学习来说，它们一般会向网络层中插入一些可学习的模块，同时这也带来了推理时间的增加。</p>
 <h2 id="Lora的做法"><a href="#Lora的做法" class="headerlink" title="Lora的做法"></a>Lora的做法</h2><p>LoRA的做法是在LLM的某些矩阵（ $W\in\mathbb{R}^{d\times k}$ ）旁插入一个和它并行的新的权值矩阵 $\Delta\boldsymbol{W}\in\mathbb{R}^{d\times k}$ ，但是因为模型的低秩性的存在，我们可以将 $\Delta\boldsymbol{W}$ 拆分成降维矩阵 $\boldsymbol{A}\in\mathbb{R}^{r\times k}$和升维矩阵 $\boldsymbol{B}\in\mathbb{R}^{d\times r}$（图1），其中 r≪min(d,k) ，从而实现了以极小的参数数量训练LLM。在训练时，我们将LLM的参数固定，只训练矩阵 A 和 B 。根据以下公式，在模型训练完成之后，我们可以直接将 A 和 B 加到原参数上，从而在推理时不会产生额外的推理时延。</p>
 <p>$$<br>\boldsymbol{h}&#x3D;\boldsymbol{W}_0\boldsymbol{x}+\Delta\boldsymbol{Wx}&#x3D;(\boldsymbol{W}_0+\Delta\boldsymbol{W})\boldsymbol{x}&#x3D;\boldsymbol{Wx}+\boldsymbol{BAx}<br>$$</p>
-<p><img src="/.com//lora.png"></p>
+<p><img src="/.io//lora.png" alt="图1 Lora网络结构"></p>
 <h2 id="LORA对比其他的优势"><a href="#LORA对比其他的优势" class="headerlink" title="LORA对比其他的优势"></a>LORA对比其他的优势</h2><p>无时延</p>
 <p>与现有方法不冲突</p>
 <p>一个预训练模型可以用来针对不同任务建立为很多小的LoRA模块。我们可以冻结共享模型，仅仅通过更换图1中的A，B矩阵来快速地切换任务，从而显著降低存储需求和任务切换开销。</p>
@@ -301,7 +301,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2024/12/01/Lora%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=https://sablea.github.io/2024/12/01/Lora%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/" alt="微信分享二维码">
     </div>
 </div>
 
