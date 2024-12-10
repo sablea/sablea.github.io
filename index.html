@@ -156,6 +156,85 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-hexo只能在cmd运行而不能在powershell运行" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2024/12/10/hexo%E5%8F%AA%E8%83%BD%E5%9C%A8cmd%E8%BF%90%E8%A1%8C%E8%80%8C%E4%B8%8D%E8%83%BD%E5%9C%A8powershell%E8%BF%90%E8%A1%8C/">hexo只能在cmd运行而不能在powershell运行</a>
+    </h1>
+  
+
+        
+        <a href="/2024/12/10/hexo%E5%8F%AA%E8%83%BD%E5%9C%A8cmd%E8%BF%90%E8%A1%8C%E8%80%8C%E4%B8%8D%E8%83%BD%E5%9C%A8powershell%E8%BF%90%E8%A1%8C/" class="archive-article-date">
+  	<time datetime="2024-12-10T13:25:03.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2024-12-10</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>安装完hexo后发现只能用cmd命令提示符中运行，而powershell则不行</p>
+<h3 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h3><p>PowerShell默认有执行策略限制，可能会阻止运行某些脚本或命令。可以通过以下命令检查和修改执行策略：</p>
+<ul>
+<li><p>打开PowerShell（以管理员身份运行）。</p>
+</li>
+<li><p>输入以下命令检查当前的执行策略：</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Get-ExecutionPolicy</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>如果返回的策略是<code>Restricted</code>，可以将其更改为<code>RemoteSigned</code>或<code>Unrestricted</code>：</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Set-ExecutionPolicy</span> RemoteSigned</span><br></pre></td></tr></table></figure>
+
+<p>或者</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Set-ExecutionPolicy</span> Unrestricted</span><br></pre></td></tr></table></figure>
+
+<p>注意：<code>RemoteSigned</code>允许本地脚本运行，而<code>Unrestricted</code>允许所有脚本运行，但可能会带来安全风险。</p>
+</li>
+</ul>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2024/12/10/hexo%E5%8F%AA%E8%83%BD%E5%9C%A8cmd%E8%BF%90%E8%A1%8C%E8%80%8C%E4%B8%8D%E8%83%BD%E5%9C%A8powershell%E8%BF%90%E8%A1%8C/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-Lora论文阅读" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     

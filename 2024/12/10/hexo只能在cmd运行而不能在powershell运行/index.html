@@ -6,13 +6,17 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://example.com">
-  <title>Archives | sablea&#39;s blog</title>
+  <title>hexo只能在cmd运行而不能在powershell运行 | sablea&#39;s blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="sablea&#39;s blog">
-<meta property="og:url" content="http://example.com/archives/index.html">
+  <meta name="description" content="安装完hexo后发现只能用cmd命令提示符中运行，而powershell则不行 解决方法PowerShell默认有执行策略限制，可能会阻止运行某些脚本或命令。可以通过以下命令检查和修改执行策略：  打开PowerShell（以管理员身份运行）。  输入以下命令检查当前的执行策略： 1Get-ExecutionPolicy  如果返回的策略是Restricted，可以将其更改为RemoteSigne">
+<meta property="og:type" content="article">
+<meta property="og:title" content="hexo只能在cmd运行而不能在powershell运行">
+<meta property="og:url" content="http://example.com/2024/12/10/hexo%E5%8F%AA%E8%83%BD%E5%9C%A8cmd%E8%BF%90%E8%A1%8C%E8%80%8C%E4%B8%8D%E8%83%BD%E5%9C%A8powershell%E8%BF%90%E8%A1%8C/index.html">
 <meta property="og:site_name" content="sablea&#39;s blog">
+<meta property="og:description" content="安装完hexo后发现只能用cmd命令提示符中运行，而powershell则不行 解决方法PowerShell默认有执行策略限制，可能会阻止运行某些脚本或命令。可以通过以下命令检查和修改执行策略：  打开PowerShell（以管理员身份运行）。  输入以下命令检查当前的执行策略： 1Get-ExecutionPolicy  如果返回的策略是Restricted，可以将其更改为RemoteSigne">
 <meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2024-12-10T13:25:03.000Z">
+<meta property="article:modified_time" content="2024-12-10T13:31:15.004Z">
 <meta property="article:author" content="sablea">
 <meta name="twitter:card" content="summary">
   
@@ -154,145 +158,172 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="post-hexo只能在cmd运行而不能在powershell运行" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
+    <h1 class="article-title" itemprop="name">
+      hexo只能在cmd运行而不能在powershell运行
+    </h1>
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2024" class="archive-year">2024</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2024/12/10/hexo%E5%8F%AA%E8%83%BD%E5%9C%A8cmd%E8%BF%90%E8%A1%8C%E8%80%8C%E4%B8%8D%E8%83%BD%E5%9C%A8powershell%E8%BF%90%E8%A1%8C/" class="archive-article-date">
+
+        
+        <a href="/2024/12/10/hexo%E5%8F%AA%E8%83%BD%E5%9C%A8cmd%E8%BF%90%E8%A1%8C%E8%80%8C%E4%B8%8D%E8%83%BD%E5%9C%A8powershell%E8%BF%90%E8%A1%8C/" class="archive-article-date">
   	<time datetime="2024-12-10T13:25:03.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2024-12-10</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2024/12/10/hexo%E5%8F%AA%E8%83%BD%E5%9C%A8cmd%E8%BF%90%E8%A1%8C%E8%80%8C%E4%B8%8D%E8%83%BD%E5%9C%A8powershell%E8%BF%90%E8%A1%8C/">hexo只能在cmd运行而不能在powershell运行</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>安装完hexo后发现只能用cmd命令提示符中运行，而powershell则不行</p>
+<h3 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h3><p>PowerShell默认有执行策略限制，可能会阻止运行某些脚本或命令。可以通过以下命令检查和修改执行策略：</p>
+<ul>
+<li><p>打开PowerShell（以管理员身份运行）。</p>
+</li>
+<li><p>输入以下命令检查当前的执行策略：</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Get-ExecutionPolicy</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>如果返回的策略是<code>Restricted</code>，可以将其更改为<code>RemoteSigned</code>或<code>Unrestricted</code>：</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Set-ExecutionPolicy</span> RemoteSigned</span><br></pre></td></tr></table></figure>
 
-        <div class="article-info info-on-right">
-          
-          
+<p>或者</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Set-ExecutionPolicy</span> Unrestricted</span><br></pre></td></tr></table></figure>
 
+<p>注意：<code>RemoteSigned</code>允许本地脚本运行，而<code>Unrestricted</code>允许所有脚本运行，但可能会带来安全风险。</p>
+</li>
+</ul>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2024/12/10/hexo%E5%8F%AA%E8%83%BD%E5%9C%A8cmd%E8%BF%90%E8%A1%8C%E8%80%8C%E4%B8%8D%E8%83%BD%E5%9C%A8powershell%E8%BF%90%E8%A1%8C/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2024/12/01/Lora%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/" class="archive-article-date">
-  	<time datetime="2024-12-01T14:12:16.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2024-12-01</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2024/12/01/Lora%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Lora论文阅读</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2024/12/01/Lora%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/">Lora论文阅读</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">论文阅读</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">大语言模型</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2024/11/05/%E4%BD%BF%E7%94%A8%E4%BA%91%E6%9C%8D%E5%8A%A1%E8%BF%9B%E8%A1%8C%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/" class="archive-article-date">
-  	<time datetime="2024-11-05T15:01:07.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2024-11-05</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2024/11/05/%E4%BD%BF%E7%94%A8%E4%BA%91%E6%9C%8D%E5%8A%A1%E8%BF%9B%E8%A1%8C%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/">使用云服务进行内网穿透</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2024/11/05/hello-world/" class="archive-article-date">
-  	<time datetime="2024-11-05T14:34:16.669Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2024-11-05</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2024/11/05/hello-world/">Hello World</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-  
-    </div></section>
-  
-
-    
 
 
           </div>
@@ -315,8 +346,8 @@
 	var yiliaConfig = {
 		mathjax: true,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
