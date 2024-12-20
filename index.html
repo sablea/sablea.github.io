@@ -281,10 +281,10 @@
 <p>过去的方案是<strong>提示学习</strong> （Prompt Learning）和 <strong>适配器学习</strong> （Adapter Learning）。提示学习的问题是模型的效果对提示的依赖非常严重，无论是离散提示还是连续提示，提示怎么有效的构造永远是提示学习的一个痛点。另外对于适配器学习来说，它们一般会向网络层中插入一些可学习的模块，同时这也带来了推理时间的增加。</p>
 <h2 id="Lora的做法"><a href="#Lora的做法" class="headerlink" title="Lora的做法"></a>Lora的做法</h2><p>LoRA的做法是在LLM的某些矩阵（ $W\in\mathbb{R}^{d\times k}$ ）旁插入一个和它并行的新的权值矩阵 $\Delta\boldsymbol{W}\in\mathbb{R}^{d\times k}$ ，但是因为模型的低秩性的存在，我们可以将 $\Delta\boldsymbol{W}$ 拆分成降维矩阵 $\boldsymbol{A}\in\mathbb{R}^{r\times k}$和升维矩阵 $\boldsymbol{B}\in\mathbb{R}^{d\times r}$（图1），其中 r≪min(d,k) ，从而实现了以极小的参数数量训练LLM。在训练时，我们将LLM的参数固定，只训练矩阵 A 和 B 。根据以下公式，在模型训练完成之后，我们可以直接将 A 和 B 加到原参数上，从而在推理时不会产生额外的推理时延。</p>
 <p>$$<br>\boldsymbol{h}&#x3D;\boldsymbol{W}_0\boldsymbol{x}+\Delta\boldsymbol{Wx}&#x3D;(\boldsymbol{W}_0+\Delta\boldsymbol{W})\boldsymbol{x}&#x3D;\boldsymbol{Wx}+\boldsymbol{BAx}<br>$$</p>
-<center>
-<img src="/assets/img/lora.png" width="25%" height="25%" />
-图1 Lora网络结构
-</center>
+<div  align="center">    
+<img src="/assets/img/lora.png" width = "25%" height="25%" alt="图1 Lora网络结构" align=center />
+<p>图1 Lora网络结构</p>
+</div>
 
 
 <h2 id="LORA对比其他的优势"><a href="#LORA对比其他的优势" class="headerlink" title="LORA对比其他的优势"></a>LORA对比其他的优势</h2><p>无时延</p>
@@ -678,15 +678,15 @@ MathJax.Hub.Queue(function() {
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">hexo</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">论文阅读</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">大语言模型</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">hexo</a>
               </li>
              
               <li class="article-tag-list-item">
