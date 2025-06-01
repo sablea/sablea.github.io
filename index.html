@@ -715,17 +715,17 @@
 
 <p><strong>客户端配置：</strong></p>
 <p>编辑frpc.toml文件</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">serverAddr = <span class="string">&quot;xxx.xxx.xxx.xxx&quot;</span> <span class="comment">#这是公网ip地址，修改成自己买的公网服务器的ip地址</span></span><br><span class="line">serverPort = 7777 <span class="comment">#其中7777为与客户端进行绑定的端口,与服务器端的frps.toml文件中的一致即可</span></span><br><span class="line"></span><br><span class="line">[[proxies]]</span><br><span class="line">name = <span class="string">&quot;ssh&quot;</span></span><br><span class="line"><span class="built_in">type</span> = <span class="string">&quot;tcp&quot;</span></span><br><span class="line">localIP = <span class="string">&quot;127.0.0.1&quot;</span></span><br><span class="line">localPort = 22</span><br><span class="line">remotePort = 6000 <span class="comment">#远程连接端口，可任意指定</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">serverAddr = <span class="string">&quot;xxx.xxx.xxx.xxx&quot;</span> <span class="comment">#这是公网ip地址，修改成自己买的公网服务器的ip地址</span></span><br><span class="line">serverPort = 7777 <span class="comment">#其中7777为与客户端进行绑定的端口,与服务器端的frps.toml文件中的一致即可</span></span><br><span class="line"></span><br><span class="line">[[proxies]]</span><br><span class="line">name = <span class="string">&quot;ssh&quot;</span></span><br><span class="line"><span class="built_in">type</span> = <span class="string">&quot;tcp&quot;</span></span><br><span class="line">localIP = <span class="string">&quot;127.0.0.1&quot;</span></span><br><span class="line">localPort = 22</span><br><span class="line">remotePort = 6000 <span class="comment">#远程连接端口，可任意指定</span></span><br></pre></td></tr></table></figure>
 
 <h3 id="运行frp软件并使用公网ip连接服务器"><a href="#运行frp软件并使用公网ip连接服务器" class="headerlink" title="运行frp软件并使用公网ip连接服务器"></a>运行frp软件并使用公网ip连接服务器</h3><p>以下运行指令，可以先运行前台启动看能不能连接上，能连接上则ctrl+c键关掉程序。然后运行后台启动指令。</p>
 <p>远程连接到公网服务器上，运行指令：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 前台启动</span></span><br><span class="line">./frps -c ./frps.toml   </span><br><span class="line"> </span><br><span class="line"><span class="comment"># 后台启动（正常使用后推荐后台启动）</span></span><br><span class="line"><span class="built_in">nohup</span> ./frps -c ./frps.toml &amp;</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 前台启动</span></span><br><span class="line">./frps -c ./frps.toml   </span><br><span class="line"></span><br><span class="line"><span class="comment"># 后台启动（正常使用后推荐后台启动）</span></span><br><span class="line"><span class="built_in">nohup</span> ./frps -c ./frps.toml &amp;</span><br></pre></td></tr></table></figure>
 
 <p>远程连接到内网服务器上，运行指令。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 前台启动</span></span><br><span class="line">./frpc -c ./frpc.toml   </span><br><span class="line"> </span><br><span class="line"><span class="comment"># 后台启动（正常使用后推荐后台启动）</span></span><br><span class="line"><span class="built_in">nohup</span> ./frpc -c ./frpc.toml &amp;</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 前台启动</span></span><br><span class="line">./frpc -c ./frpc.toml   </span><br><span class="line"></span><br><span class="line"><span class="comment"># 后台启动（正常使用后推荐后台启动）</span></span><br><span class="line"><span class="built_in">nohup</span> ./frpc -c ./frpc.toml &amp;</span><br></pre></td></tr></table></figure>
 
 <p>使用公网ip连接到内网服务器，例如：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">ssh -p 6000 username@xxx.xxx.xxx.xxx</span><br><span class="line"><span class="comment">#其中用户名和密码都是内网服务器的用户名和密码，6000为frpc.toml文件中指定的端口号</span></span><br><span class="line"><span class="comment">#xxx.xxx.xxx.xxx 为公网ip</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">ssh -p 6000 username@xxx.xxx.xxx.xxx</span><br><span class="line"><span class="comment">#其中用户名和密码都是内网服务器的用户名和密码，6000为frpc.toml文件中指定的端口号</span></span><br><span class="line"><span class="comment">#xxx.xxx.xxx.xxx 为公网ip</span></span><br></pre></td></tr></table></figure>
 
 <h3 id="（可选）frpc加入开机自启动"><a href="#（可选）frpc加入开机自启动" class="headerlink" title="（可选）frpc加入开机自启动"></a>（可选）frpc加入开机自启动</h3><p>顺带一提，本节使用nohup设置后台启动是为了简单。</p>
 <p>但是假如<strong>服务器突然停电关机</strong>了，那么在来电重启后，还需要重新启动frpc软件，这就需要<strong>再次通过内网环境连接到内网服务器并启动frpc软件了</strong>。</p>
@@ -738,6 +738,17 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">网络</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 
       
@@ -993,10 +1004,6 @@ MathJax.Hub.Queue(function() {
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">hexo</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">论文阅读</a>
               </li>
              
@@ -1005,11 +1012,11 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Mysql</a>
+                <a href="javascript:void(0)" class="js-tag color3">网络</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">数据库管理</a>
+                <a href="javascript:void(0)" class="js-tag color5">hexo</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1026,6 +1033,14 @@ MathJax.Hub.Queue(function() {
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">教程</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Mysql</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">数据库管理</a>
               </li>
             
             <div class="clearfix"></div>
