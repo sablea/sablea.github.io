@@ -6,11 +6,11 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://example.com">
-  <title>sablea&#39;s blog</title>
+  <title>Archives: 2025/6 | sablea&#39;s blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta property="og:type" content="website">
 <meta property="og:title" content="sablea&#39;s blog">
-<meta property="og:url" content="http://example.com/index.html">
+<meta property="og:url" content="http://example.com/archives/2025/06/index.html">
 <meta property="og:site_name" content="sablea&#39;s blog">
 <meta property="og:locale" content="en_US">
 <meta property="article:author" content="sablea">
@@ -156,36 +156,34 @@
           <div id="js-content" class="content-ll">
             
   
-    <article id="post-直接可使用的日志模块" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
+  
     
-      <header class="article-header">
-        
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2025" class="archive-year">2025</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/2025/06/01/%E7%9B%B4%E6%8E%A5%E5%8F%AF%E4%BD%BF%E7%94%A8%E7%9A%84%E6%97%A5%E5%BF%97%E6%A8%A1%E5%9D%97/" class="archive-article-date">
+  	<time datetime="2025-06-01T05:48:09.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2025-06-01</time>
+</a>
+        </div>
+    	 
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2025/06/01/%E7%9B%B4%E6%8E%A5%E5%8F%AF%E4%BD%BF%E7%94%A8%E7%9A%84%E6%97%A5%E5%BF%97%E6%A8%A1%E5%9D%97/">直接可使用的日志模块</a>
+      <a class="archive-article-title" href="/2025/06/01/%E7%9B%B4%E6%8E%A5%E5%8F%AF%E4%BD%BF%E7%94%A8%E7%9A%84%E6%97%A5%E5%BF%97%E6%A8%A1%E5%9D%97/">直接可使用的日志模块</a>
     </h1>
   
 
-        
-        <a href="/2025/06/01/%E7%9B%B4%E6%8E%A5%E5%8F%AF%E4%BD%BF%E7%94%A8%E7%9A%84%E6%97%A5%E5%BF%97%E6%A8%A1%E5%9D%97/" class="archive-article-date">
-  	<time datetime="2025-06-01T05:48:09.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2025-06-01</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>我觉得在每个.py文件中都需要运行getLogger()方法实在是太麻烦了，写了一个这个方法。直接放在utils&#x2F;logger.py文件下，需要用时直接引用log_message()和log_title()这两个方法就好。</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> logging</span><br><span class="line"><span class="keyword">import</span> os</span><br><span class="line"><span class="keyword">from</span> datetime <span class="keyword">import</span> datetime</span><br><span class="line"><span class="comment"># 获取logger.py文件的绝对路径</span></span><br><span class="line">logger_file_path = os.path.abspath(__file__)</span><br><span class="line"><span class="comment"># 获取logger.py文件的上上上一级目录</span></span><br><span class="line">project_root = os.path.dirname(os.path.dirname(os.path.dirname(os.path.dirname(logger_file_path))))</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">CustomFormatter</span>(logging.Formatter):</span><br><span class="line">    <span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="string">    定义输出格式，分为title和msg</span></span><br><span class="line"><span class="string">    &#x27;&#x27;&#x27;</span></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">format</span>(<span class="params">self, record</span>):</span><br><span class="line">        <span class="comment"># 获取默认格式的日志消息</span></span><br><span class="line">        record.msg = <span class="built_in">super</span>().<span class="built_in">format</span>(record)</span><br><span class="line"></span><br><span class="line">        <span class="comment"># 添加居中的分割线</span></span><br><span class="line">        <span class="keyword">if</span> <span class="built_in">hasattr</span>(record, <span class="string">&#x27;title&#x27;</span>):</span><br><span class="line">            title = record.title</span><br><span class="line">            <span class="comment"># line = &#x27;=&#x27; * 80</span></span><br><span class="line">            <span class="comment"># formatted_title = f&#x27;=== &#123;title.center(74)&#125; ===&#x27;</span></span><br><span class="line">            <span class="comment"># return f&#x27;\n&#123;line&#125;\n&#123;formatted_title&#125;\n&#123;line&#125;\n&#x27;</span></span><br><span class="line">            token = <span class="string">&#x27;=&#x27;</span>*<span class="number">25</span></span><br><span class="line">            formatted_title = <span class="string">f&#x27;= <span class="subst">&#123;title.center(<span class="number">74</span>)&#125;</span> =&#x27;</span></span><br><span class="line">            <span class="keyword">return</span> <span class="string">f&#x27;<span class="subst">&#123;token&#125;</span><span class="subst">&#123;formatted_title&#125;</span><span class="subst">&#123;token&#125;</span>&#x27;</span></span><br><span class="line">        <span class="keyword">return</span> record.msg</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">setup_logger</span>():</span><br><span class="line">    <span class="comment"># 配置根日志记录器</span></span><br><span class="line">    root_logger = logging.getLogger()</span><br><span class="line">    root_logger.setLevel(logging.DEBUG)</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 创建日志目录</span></span><br><span class="line">    log_dir = os.path.join(project_root, <span class="string">&#x27;logs&#x27;</span>)</span><br><span class="line">    os.makedirs(log_dir, exist_ok=<span class="literal">True</span>)</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 文件处理器</span></span><br><span class="line">    log_file = os.path.join(log_dir, <span class="string">f&#x27;experiment_<span class="subst">&#123;datetime.now().strftime(<span class="string">&quot;%Y-%m-%d_%H-%M-%S&quot;</span>)&#125;</span>.log&#x27;</span>)</span><br><span class="line">    file_handler = logging.FileHandler(log_file, encoding=<span class="string">&#x27;utf-8&#x27;</span>)</span><br><span class="line">    file_handler.setLevel(logging.DEBUG)</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 控制台处理器</span></span><br><span class="line">    stream_handler = logging.StreamHandler()</span><br><span class="line">    stream_handler.setLevel(logging.INFO)</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 设置格式化器</span></span><br><span class="line">    formatter = CustomFormatter(<span class="string">&#x27;%(asctime)s - %(name)s - %(levelname)s - %(message)s&#x27;</span>)</span><br><span class="line">    file_handler.setFormatter(formatter)</span><br><span class="line">    stream_handler.setFormatter(formatter)</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 清除现有处理器并添加新处理器</span></span><br><span class="line">    <span class="keyword">for</span> handler <span class="keyword">in</span> root_logger.handlers[:]:</span><br><span class="line">        root_logger.removeHandler(handler)</span><br><span class="line">    root_logger.addHandler(file_handler)</span><br><span class="line">    root_logger.addHandler(stream_handler)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> root_logger</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># 在模块初始化时设置logger</span></span><br><span class="line">setup_logger()</span><br><span class="line"><span class="keyword">import</span> inspect</span><br><span class="line"><span class="keyword">def</span> <span class="title function_">_get_caller_module</span>():</span><br><span class="line">    <span class="string">&quot;&quot;&quot;回溯调用栈找到第一个非本模块的调用者&quot;&quot;&quot;</span></span><br><span class="line">    frame = inspect.currentframe()</span><br><span class="line">    <span class="keyword">while</span> frame:</span><br><span class="line">        frame = frame.f_back</span><br><span class="line">        <span class="keyword">if</span> frame <span class="keyword">and</span> frame.f_globals.get(<span class="string">&#x27;__name__&#x27;</span>) != __name__:</span><br><span class="line">            <span class="keyword">return</span> frame.f_globals[<span class="string">&#x27;__name__&#x27;</span>]</span><br><span class="line">    <span class="keyword">return</span> <span class="string">&#x27;unknown_module&#x27;</span></span><br><span class="line"><span class="comment"># 定义便捷函数来记录带有标题的分割线</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">log_title</span>(<span class="params">title, level=logging.INFO</span>):</span><br><span class="line">    caller_module = _get_caller_module()</span><br><span class="line">    logger = logging.getLogger(caller_module)</span><br><span class="line">    logger.log(level, <span class="string">&#x27;&#x27;</span>, extra=&#123;<span class="string">&#x27;title&#x27;</span>: title&#125;)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 定义便捷函数来记录普通日志消息</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">log_message</span>(<span class="params">msg, level=logging.INFO</span>):</span><br><span class="line">    caller_module = _get_caller_module()</span><br><span class="line">    logger = logging.getLogger(caller_module)</span><br><span class="line">    logger.log(level, msg)</span><br></pre></td></tr></table></figure>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
+        <div class="article-info info-on-right">
+          
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -201,120 +199,33 @@
 		</ul>
 	</div>
 
-      
+          
 
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2025/06/01/%E7%9B%B4%E6%8E%A5%E5%8F%AF%E4%BD%BF%E7%94%A8%E7%9A%84%E6%97%A5%E5%BF%97%E6%A8%A1%E5%9D%97/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
+        </div>
+        <div class="clearfix"></div>
+    </header>
   </div>
 </article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
   
-    <article id="post-项目中log模块的写法" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
     
-      <header class="article-header">
-        
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/2025/06/01/%E9%A1%B9%E7%9B%AE%E4%B8%ADlog%E6%A8%A1%E5%9D%97%E7%9A%84%E5%86%99%E6%B3%95/" class="archive-article-date">
+  	<time datetime="2025-06-01T05:42:50.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2025-06-01</time>
+</a>
+        </div>
+    	 
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2025/06/01/%E9%A1%B9%E7%9B%AE%E4%B8%ADlog%E6%A8%A1%E5%9D%97%E7%9A%84%E5%86%99%E6%B3%95/">项目中log模块的写法(来自qwen3大模型回答)</a>
+      <a class="archive-article-title" href="/2025/06/01/%E9%A1%B9%E7%9B%AE%E4%B8%ADlog%E6%A8%A1%E5%9D%97%E7%9A%84%E5%86%99%E6%B3%95/">项目中log模块的写法(来自qwen3大模型回答)</a>
     </h1>
   
 
-        
-        <a href="/2025/06/01/%E9%A1%B9%E7%9B%AE%E4%B8%ADlog%E6%A8%A1%E5%9D%97%E7%9A%84%E5%86%99%E6%B3%95/" class="archive-article-date">
-  	<time datetime="2025-06-01T05:42:50.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2025-06-01</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Python 的 <code>logging</code> 是一个<strong>全局的日志系统</strong>。一旦你设置了 Handler（如 FileHandler），它会被应用到整个 logging 系统（除非你在某个 logger 上单独设置 propagate&#x3D;False 或自定义 handler）。</p>
-<p>所以你只需要在项目启动时配置一次日志输出位置即可，无需在每个模块重复配置。</p>
-<hr>
-<h2 id="✅-推荐做法：在主入口统一配置-Log-输出路径"><a href="#✅-推荐做法：在主入口统一配置-Log-输出路径" class="headerlink" title="✅ 推荐做法：在主入口统一配置 Log 输出路径"></a>✅ 推荐做法：在主入口统一配置 Log 输出路径</h2><p>例如你的项目结构如下：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">myproject/</span><br><span class="line">├── main.py</span><br><span class="line">├── module_a.py</span><br><span class="line">└── module_b.py</span><br></pre></td></tr></table></figure>
-
-<h3 id="在-main-py-中配置日志输出到文件："><a href="#在-main-py-中配置日志输出到文件：" class="headerlink" title="在 main.py 中配置日志输出到文件："></a>在 <code>main.py</code> 中配置日志输出到文件：</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># main.py</span></span><br><span class="line"><span class="keyword">import</span> logging</span><br><span class="line"><span class="keyword">import</span> os</span><br><span class="line"></span><br><span class="line"><span class="comment"># 创建 logs 目录（如果不存在）</span></span><br><span class="line"><span class="keyword">if</span> <span class="keyword">not</span> os.path.exists(<span class="string">&#x27;logs&#x27;</span>):</span><br><span class="line">    os.makedirs(<span class="string">&#x27;logs&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 配置 logging</span></span><br><span class="line">logging.basicConfig(</span><br><span class="line">    level=logging.INFO,</span><br><span class="line">    <span class="built_in">format</span>=<span class="string">&#x27;%(asctime)s - %(name)s - %(levelname)s - %(message)s&#x27;</span>,</span><br><span class="line">    filename=<span class="string">&#x27;logs/app.log&#x27;</span>,       <span class="comment"># 日志写入的文件路径</span></span><br><span class="line">    filemode=<span class="string">&#x27;a&#x27;</span>,                   <span class="comment"># &#x27;a&#x27; 表示追加模式，默认也是 &#x27;a&#x27;</span></span><br><span class="line">)</span><br></pre></td></tr></table></figure>
-
-<p>然后你可以随意在其他模块中使用：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># module_a.py</span></span><br><span class="line"><span class="keyword">import</span> logging</span><br><span class="line"></span><br><span class="line">logger = logging.getLogger(__name__)</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">do_something</span>():</span><br><span class="line">    logger.info(<span class="string">&quot;Doing something in module_a&quot;</span>)</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># module_b.py</span></span><br><span class="line"><span class="keyword">import</span> logging</span><br><span class="line"></span><br><span class="line">logger = logging.getLogger(__name__)</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">do_something_else</span>():</span><br><span class="line">    logger.warning(<span class="string">&quot;Warning from module_b&quot;</span>)</span><br></pre></td></tr></table></figure>
-
-<p>这样所有的日志都会自动记录到 <code>logs/app.log</code> 文件中，不需要你在每个模块里再设置一遍！</p>
-<hr>
-<h2 id="🔁-如果你想同时输出到控制台和文件？"><a href="#🔁-如果你想同时输出到控制台和文件？" class="headerlink" title="🔁 如果你想同时输出到控制台和文件？"></a>🔁 如果你想同时输出到控制台和文件？</h2><p>可以添加多个 Handler：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># main.py</span></span><br><span class="line"><span class="keyword">import</span> logging</span><br><span class="line"><span class="keyword">import</span> os</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> <span class="keyword">not</span> os.path.exists(<span class="string">&#x27;logs&#x27;</span>):</span><br><span class="line">    os.makedirs(<span class="string">&#x27;logs&#x27;</span>)</span><br><span class="line"></span><br><span class="line">logger = logging.getLogger()</span><br><span class="line">logger.setLevel(logging.INFO)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 创建一个 FileHandler 写入文件</span></span><br><span class="line">file_handler = logging.FileHandler(<span class="string">&#x27;logs/app.log&#x27;</span>)</span><br><span class="line">file_formatter = logging.Formatter(<span class="string">&#x27;%(asctime)s - %(name)s - %(levelname)s - %(message)s&#x27;</span>)</span><br><span class="line">file_handler.setFormatter(file_formatter)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 创建一个 StreamHandler 输出到控制台</span></span><br><span class="line">console_handler = logging.StreamHandler()</span><br><span class="line">console_formatter = logging.Formatter(<span class="string">&#x27;%(name)s - %(levelname)s - %(message)s&#x27;</span>)</span><br><span class="line">console_handler.setFormatter(console_formatter)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 添加 Handler 到 root logger</span></span><br><span class="line">logger.addHandler(file_handler)</span><br><span class="line">logger.addHandler(console_handler)</span><br></pre></td></tr></table></figure>
-
-<p>这样你的日志就会既写入文件，又打印到控制台了。</p>
-<hr>
-<h2 id="📦-进阶建议：用-dictConfig-实现更灵活配置"><a href="#📦-进阶建议：用-dictConfig-实现更灵活配置" class="headerlink" title="📦 进阶建议：用 dictConfig 实现更灵活配置"></a>📦 进阶建议：用 dictConfig 实现更灵活配置</h2><p>如果你的项目较大，推荐使用 <code>dictConfig</code> 方式，支持更多的定制化配置，比如不同模块输出到不同的文件、按天滚动日志等。</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> logging.config <span class="keyword">import</span> dictConfig</span><br><span class="line"></span><br><span class="line">LOGGING_CONFIG = &#123;</span><br><span class="line">    <span class="string">&#x27;version&#x27;</span>: <span class="number">1</span>,</span><br><span class="line">    <span class="string">&#x27;disable_existing_loggers&#x27;</span>: <span class="literal">False</span>,</span><br><span class="line">    <span class="string">&#x27;formatters&#x27;</span>: &#123;</span><br><span class="line">        <span class="string">&#x27;standard&#x27;</span>: &#123;</span><br><span class="line">            <span class="string">&#x27;format&#x27;</span>: <span class="string">&#x27;%(asctime)s [%(levelname)s] %(name)s: %(message)s&#x27;</span></span><br><span class="line">        &#125;,</span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="string">&#x27;handlers&#x27;</span>: &#123;</span><br><span class="line">        <span class="string">&#x27;default&#x27;</span>: &#123;</span><br><span class="line">            <span class="string">&#x27;class&#x27;</span>: <span class="string">&#x27;logging.FileHandler&#x27;</span>,</span><br><span class="line">            <span class="string">&#x27;formatter&#x27;</span>: <span class="string">&#x27;standard&#x27;</span>,</span><br><span class="line">            <span class="string">&#x27;filename&#x27;</span>: <span class="string">&#x27;logs/app.log&#x27;</span>,</span><br><span class="line">        &#125;,</span><br><span class="line">        <span class="string">&#x27;console&#x27;</span>: &#123;</span><br><span class="line">            <span class="string">&#x27;class&#x27;</span>: <span class="string">&#x27;logging.StreamHandler&#x27;</span>,</span><br><span class="line">            <span class="string">&#x27;formatter&#x27;</span>: <span class="string">&#x27;standard&#x27;</span>,</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="string">&#x27;root&#x27;</span>: &#123;</span><br><span class="line">        <span class="string">&#x27;handlers&#x27;</span>: [<span class="string">&#x27;default&#x27;</span>, <span class="string">&#x27;console&#x27;</span>],</span><br><span class="line">        <span class="string">&#x27;level&#x27;</span>: <span class="string">&#x27;INFO&#x27;</span>,</span><br><span class="line">    &#125;,</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">dictConfig(LOGGING_CONFIG)</span><br></pre></td></tr></table></figure>
-
-<hr>
-<h2 id="✅-总结"><a href="#✅-总结" class="headerlink" title="✅ 总结"></a>✅ 总结</h2><table>
-<thead>
-<tr>
-<th>问题</th>
-<th>回答</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>是否需要在每个 .py 文件中指定 log 文件路径？</td>
-<td>❌ 不需要，只需在主入口统一配置一次</td>
-</tr>
-<tr>
-<td>所有模块共享同一个日志配置吗？</td>
-<td>✅ 是的，因为 logging 是全局系统</td>
-</tr>
-<tr>
-<td>如何将日志写入文件？</td>
-<td>使用 <code>basicConfig(filename=...)</code> 或 <code>FileHandler</code></td>
-</tr>
-<tr>
-<td>可以同时输出到控制台和文件吗？</td>
-<td>✅ 可以添加多个 Handler</td>
-</tr>
-<tr>
-<td>更复杂的配置怎么办？</td>
-<td>使用 <code>dictConfig</code> 或 <code>fileConfig</code></td>
-</tr>
-</tbody></table>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
+        <div class="article-info info-on-right">
+          
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -330,449 +241,19 @@
 		</ul>
 	</div>
 
-      
+          
 
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2025/06/01/%E9%A1%B9%E7%9B%AE%E4%B8%ADlog%E6%A8%A1%E5%9D%97%E7%9A%84%E5%86%99%E6%B3%95/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
+        </div>
+        <div class="clearfix"></div>
+    </header>
   </div>
 </article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
   
-    <article id="post-hexo只能在cmd运行而不能在powershell运行" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
+  
+    </div></section>
+  
+
     
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2024/12/10/hexo%E5%8F%AA%E8%83%BD%E5%9C%A8cmd%E8%BF%90%E8%A1%8C%E8%80%8C%E4%B8%8D%E8%83%BD%E5%9C%A8powershell%E8%BF%90%E8%A1%8C/">hexo只能在cmd运行而不能在powershell运行</a>
-    </h1>
-  
-
-        
-        <a href="/2024/12/10/hexo%E5%8F%AA%E8%83%BD%E5%9C%A8cmd%E8%BF%90%E8%A1%8C%E8%80%8C%E4%B8%8D%E8%83%BD%E5%9C%A8powershell%E8%BF%90%E8%A1%8C/" class="archive-article-date">
-  	<time datetime="2024-12-10T13:25:03.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2024-12-10</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>安装完hexo后发现只能用cmd命令提示符中运行，而powershell则不行</p>
-<h3 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h3><p>PowerShell默认有执行策略限制，可能会阻止运行某些脚本或命令。可以通过以下命令检查和修改执行策略：</p>
-<ul>
-<li><p>打开PowerShell（以管理员身份运行）。</p>
-</li>
-<li><p>输入以下命令检查当前的执行策略：</p>
-<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Get-ExecutionPolicy</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>如果返回的策略是<code>Restricted</code>，可以将其更改为<code>RemoteSigned</code>或<code>Unrestricted</code>：</p>
-<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Set-ExecutionPolicy</span> RemoteSigned</span><br></pre></td></tr></table></figure>
-
-<p>或者</p>
-<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Set-ExecutionPolicy</span> Unrestricted</span><br></pre></td></tr></table></figure>
-
-<p>注意：<code>RemoteSigned</code>允许本地脚本运行，而<code>Unrestricted</code>允许所有脚本运行，但可能会带来安全风险。</p>
-</li>
-</ul>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">hexo</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">bug</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2024/12/10/hexo%E5%8F%AA%E8%83%BD%E5%9C%A8cmd%E8%BF%90%E8%A1%8C%E8%80%8C%E4%B8%8D%E8%83%BD%E5%9C%A8powershell%E8%BF%90%E8%A1%8C/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-Lora论文阅读" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2024/12/01/Lora%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/">Lora论文阅读</a>
-    </h1>
-  
-
-        
-        <a href="/2024/12/01/Lora%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/" class="archive-article-date">
-  	<time datetime="2024-12-01T14:12:16.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2024-12-01</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="Lora论文阅读"><a href="#Lora论文阅读" class="headerlink" title="Lora论文阅读"></a>Lora论文阅读</h1><p><a target="_blank" rel="noopener" href="https://arxiv.org/pdf/2106.09685">原始论文链接</a></p>
-<h2 id="Lora的背景思路："><a href="#Lora的背景思路：" class="headerlink" title="Lora的背景思路："></a>Lora的背景思路：</h2><p>深度学习的矩阵往往是过参数化的（over-parametrized），大模型的权重拥有某种内在维度（<a target="_blank" rel="noopener" href="https://arxiv.org/pdf/2012.13255">intrinsic dimension</a>）。它表示模型权重中存在的有效信息的维度。</p>
-<p>实际上许多问题的内在维度比人们认为的要小的多，而对于某个数据集，内在维度在不同参数量级的模型上差距并不大。这个内在维度指的是我们解决这个问题实际上需要的参数空间的维度，我们对模型的微调通常调整的也是这些低秩的内在维度。</p>
-<p>因此：</p>
-<p><em><strong>“一个过参数的模型的参数空间是有压缩的空间的</strong></em>”</p>
-<p>也就是说只需一个低维的参数即可保证大模型对下游任务的适应，相当一部分参数是冗余的。</p>
-<p>研发一个使用低维参数矩阵即可微调模型的方法，因此取名Low-Rank Adaptation（低秩适应）。</p>
-<h2 id="该论文想解决的问题"><a href="#该论文想解决的问题" class="headerlink" title="该论文想解决的问题"></a>该论文想解决的问题</h2><p>大论文的fine-tuning，对这一方向提出了自己的解决方案。</p>
-<p>过去的方案是<strong>提示学习</strong> （Prompt Learning）和 <strong>适配器学习</strong> （Adapter Learning）。提示学习的问题是模型的效果对提示的依赖非常严重，无论是离散提示还是连续提示，提示怎么有效的构造永远是提示学习的一个痛点。另外对于适配器学习来说，它们一般会向网络层中插入一些可学习的模块，同时这也带来了推理时间的增加。</p>
-<h2 id="Lora的做法"><a href="#Lora的做法" class="headerlink" title="Lora的做法"></a>Lora的做法</h2><p>LoRA的做法是在LLM的某些矩阵（ $W\in\mathbb{R}^{d\times k}$ ）旁插入一个和它并行的新的权值矩阵 $\Delta\boldsymbol{W}\in\mathbb{R}^{d\times k}$ ，但是因为模型的低秩性的存在，我们可以将 $\Delta\boldsymbol{W}$ 拆分成降维矩阵 $\boldsymbol{A}\in\mathbb{R}^{r\times k}$和升维矩阵 $\boldsymbol{B}\in\mathbb{R}^{d\times r}$（图1），其中 r≪min(d,k) ，从而实现了以极小的参数数量训练LLM。在训练时，我们将LLM的参数固定，只训练矩阵 A 和 B 。根据以下公式，在模型训练完成之后，我们可以直接将 A 和 B 加到原参数上，从而在推理时不会产生额外的推理时延。</p>
-<p>$$<br>\boldsymbol{h}&#x3D;\boldsymbol{W}_0\boldsymbol{x}+\Delta\boldsymbol{Wx}&#x3D;(\boldsymbol{W}_0+\Delta\boldsymbol{W})\boldsymbol{x}&#x3D;\boldsymbol{Wx}+\boldsymbol{BAx}<br>$$</p>
-<div  align="center">    
-<img src="/assets/img/lora.png" width = "25%" height="25%" alt="图1 Lora网络结构" align=center />
-<p>图1 Lora网络结构</p>
-</div>
-
-
-<h2 id="LORA对比其他的优势"><a href="#LORA对比其他的优势" class="headerlink" title="LORA对比其他的优势"></a>LORA对比其他的优势</h2><p>无时延</p>
-<p>与现有方法不冲突</p>
-<p>一个预训练模型可以用来针对不同任务建立为很多小的LoRA模块。我们可以冻结共享模型，仅仅通过更换图1中的A，B矩阵来快速地切换任务，从而显著降低存储需求和任务切换开销。</p>
-<h2 id="阅读时我的疑问"><a href="#阅读时我的疑问" class="headerlink" title="阅读时我的疑问"></a>阅读时我的疑问</h2><p>这里alpha和r是超参数吗？是的，就是指定的超参数，r为矩阵的秩。</p>
-<p>它是一个缩放参数，通常是一个常数。通过设置 α 有助于在变化 r 时减少重新调整超参数的需求。</p>
-<blockquote>
-<p>我们对A矩阵使用随机高斯初始化，对B矩阵初始化为零，因此在训练开始时∆W &#x3D; BA为零。然后，我们给∆Wx乘以α&#x2F;r的系数，其中α是r中的一个常数。当使用Adam法优化时，如果我们调整了合理的初始值，调整α大致上等同于调整学习率。因此，我们简单地将α设置为我们尝试的第一个r，并且不再对它进行调整。这种调整有助于减少在我们改变r时重新调整超参的需求（Yang &amp; Hu, 2021）。</p>
-</blockquote>
-<p>什么是累计梯度更新？accumulated gradient update（感觉这问题不太重要）</p>
-<blockquote>
-<p>LoRA takes a step further and does not require the accumulated gradient update to weight matrices to have full-rank during adaptation.</p>
-<p>LoRA更进一步，不要求在适配过程中权重矩阵的累积梯度更新具有完全秩。</p>
-</blockquote>
-<p>这个很好理解，作者在说明基于适配器的方法随着参数增加，其实就是在训练一个MLP</p>
-<blockquote>
-<p>In other words, as we increase the number of trainable parameters, training LoRA roughly converges to training the original model, while adapter-based methods converges to an MLP and prefix-based methods to a model that cannot take long input sequences.</p>
-<p>换句话说，随着我们增加可训练参数的数量，训练LoRA大致上类似于训练原始模型，如果基于适配器的方法类似于一个MLP方法，以及基于前缀的方法类似于一个不能处理长输入序列的模型。</p>
-</blockquote>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">论文阅读</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">大语言模型</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2024/12/01/Lora%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-使用云服务进行内网穿透" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2024/11/05/%E4%BD%BF%E7%94%A8%E4%BA%91%E6%9C%8D%E5%8A%A1%E8%BF%9B%E8%A1%8C%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/">使用云服务进行内网穿透</a>
-    </h1>
-  
-
-        
-        <a href="/2024/11/05/%E4%BD%BF%E7%94%A8%E4%BA%91%E6%9C%8D%E5%8A%A1%E8%BF%9B%E8%A1%8C%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/" class="archive-article-date">
-  	<time datetime="2024-11-05T15:01:07.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2024-11-05</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="使用云服务器进行内网穿透"><a href="#使用云服务器进行内网穿透" class="headerlink" title="使用云服务器进行内网穿透"></a>使用云服务器进行内网穿透</h2><p>以腾讯云服务器,frp软件为例</p>
-<h3 id="目的"><a href="#目的" class="headerlink" title="目的"></a>目的</h3><p>使非内网环境用户能够使用ssh连接访问到服务器。</p>
-<h3 id="事前准备"><a href="#事前准备" class="headerlink" title="事前准备"></a>事前准备</h3><p>frp软件，可在此处<a target="_blank" rel="noopener" href="https://github.com/fatedier/frp/releases">链接</a>进行下载。下载最新版的即可，例如：frp_0.58.1_linux_amd64.tar.gz，注意文件名的字段一般包含linux和amd64。本节也以该文件名为例进行演示。</p>
-<p>一个公网服务器，可以在阿里云&#x2F;华为云&#x2F;腾讯云等云服务器产品商处购买。本节将以腾讯云为例进行展示。各大云服务器产品都有学生优惠，可以低价买到服务器。笔者购买的是腾讯云学生优惠112元一年的云服务器，cpu2核内存2G带宽4M。服务器的硬件配置无所谓，最重要是拥有一个公网的IP地址。</p>
-<p>此处略过公网服务器的配置，总之随便给公网服务器安装上Linux系统，并且你能够远程连接到该公网服务器即可。</p>
-<h3 id="配置frp软件"><a href="#配置frp软件" class="headerlink" title="配置frp软件"></a>配置frp软件</h3><p>在公网服务器上和内网服务器上都需下载frp软件，并进行解压。下载和解压的代码参考如下：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">wget https://github.com/fatedier/frp/releases/download/v0.58.1/frp_0.58.1_linux_amd64.tar.gz</span><br><span class="line">tar -zxvf frp_0.58.1_linux_amd64.tar.gz</span><br></pre></td></tr></table></figure>
-
-<p>压缩包内通常包含以下5个文件：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">frpc  frpc.toml   frps   frps.toml   LICENSE</span><br></pre></td></tr></table></figure>
-
-<p>LICENSE不用管，<strong>其余文件名中，带字母c的表示客户端（client），应该在本地的内网服务器上进行运行。带s的表示服务端(server),应该在公网服务器上进行运行。</strong></p>
-<p>.toml为配置文件，按照以下方式进行配置<br><strong>服务端配置：</strong></p>
-<p>编辑frps.toml文件，可使用vim或nano等文本编辑器进行编辑，具体怎么编辑可自行搜索教程。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bindPort = 7777 <span class="comment">#其中7777为与客户端进行绑定的端口，可任意指定，不与现有软件端口冲突了就好</span></span><br></pre></td></tr></table></figure>
-
-<p><strong>客户端配置：</strong></p>
-<p>编辑frpc.toml文件</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">serverAddr = <span class="string">&quot;xxx.xxx.xxx.xxx&quot;</span> <span class="comment">#这是公网ip地址，修改成自己买的公网服务器的ip地址</span></span><br><span class="line">serverPort = 7777 <span class="comment">#其中7777为与客户端进行绑定的端口,与服务器端的frps.toml文件中的一致即可</span></span><br><span class="line"></span><br><span class="line">[[proxies]]</span><br><span class="line">name = <span class="string">&quot;ssh&quot;</span></span><br><span class="line"><span class="built_in">type</span> = <span class="string">&quot;tcp&quot;</span></span><br><span class="line">localIP = <span class="string">&quot;127.0.0.1&quot;</span></span><br><span class="line">localPort = 22</span><br><span class="line">remotePort = 6000 <span class="comment">#远程连接端口，可任意指定</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<h3 id="运行frp软件并使用公网ip连接服务器"><a href="#运行frp软件并使用公网ip连接服务器" class="headerlink" title="运行frp软件并使用公网ip连接服务器"></a>运行frp软件并使用公网ip连接服务器</h3><p>以下运行指令，可以先运行前台启动看能不能连接上，能连接上则ctrl+c键关掉程序。然后运行后台启动指令。</p>
-<p>远程连接到公网服务器上，运行指令：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 前台启动</span></span><br><span class="line">./frps -c ./frps.toml   </span><br><span class="line"> </span><br><span class="line"><span class="comment"># 后台启动（正常使用后推荐后台启动）</span></span><br><span class="line"><span class="built_in">nohup</span> ./frps -c ./frps.toml &amp;</span><br></pre></td></tr></table></figure>
-
-<p>远程连接到内网服务器上，运行指令。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 前台启动</span></span><br><span class="line">./frpc -c ./frpc.toml   </span><br><span class="line"> </span><br><span class="line"><span class="comment"># 后台启动（正常使用后推荐后台启动）</span></span><br><span class="line"><span class="built_in">nohup</span> ./frpc -c ./frpc.toml &amp;</span><br></pre></td></tr></table></figure>
-
-<p>使用公网ip连接到内网服务器，例如：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">ssh -p 6000 username@xxx.xxx.xxx.xxx</span><br><span class="line"><span class="comment">#其中用户名和密码都是内网服务器的用户名和密码，6000为frpc.toml文件中指定的端口号</span></span><br><span class="line"><span class="comment">#xxx.xxx.xxx.xxx 为公网ip</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="（可选）frpc加入开机自启动"><a href="#（可选）frpc加入开机自启动" class="headerlink" title="（可选）frpc加入开机自启动"></a>（可选）frpc加入开机自启动</h3><p>顺带一提，本节使用nohup设置后台启动是为了简单。</p>
-<p>但是假如<strong>服务器突然停电关机</strong>了，那么在来电重启后，还需要重新启动frpc软件，这就需要<strong>再次通过内网环境连接到内网服务器并启动frpc软件了</strong>。</p>
-<p>这种情况十分不方便，我建议可以直接把<strong>frpc软件的启动指令加入到开机自启动中</strong>，而并不使用nohup。这种方法能够让frpc每次开机都自动在后台运行，以避免停电等情况带来的影响。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 在 /etc/systemd/system/ 目录下创建一个名为 frpc.service 的文件，</span></span><br><span class="line"><span class="built_in">sudo</span> vim /etc/systemd/system/frpc.service。</span><br><span class="line"><span class="comment"># 在文件中输入以下内容，其中 ExecStart 需要替换为你自己的frpc启动命令，</span></span><br><span class="line"><span class="comment"># 例如 /home/ubuntu/frpc -c /home/ubuntu/frpc.toml。 </span></span><br><span class="line"><span class="comment"># 你也可以设置一个 token 参数来验证你的frpc客户端和frps服务器的连接，此处略过不表</span></span><br><span class="line">[Unit]</span><br><span class="line">Description=frpc</span><br><span class="line">After=network.target</span><br><span class="line">Wants=network.target</span><br><span class="line"></span><br><span class="line">[Service]</span><br><span class="line">Type=simple</span><br><span class="line">Restart=on-failure</span><br><span class="line">RestartSec=5s</span><br><span class="line">ExecStart=你的frpc启动命令</span><br><span class="line"></span><br><span class="line">[Install]</span><br><span class="line">WantedBy=multi-user.target</span><br><span class="line"></span><br><span class="line"><span class="comment"># 保存并退出文件。</span></span><br><span class="line">执行 <span class="built_in">sudo</span> systemctl daemon-reload 来加载服务文件。</span><br><span class="line">执行 <span class="built_in">sudo</span> systemctl <span class="built_in">enable</span> frpc 来设置开机自启动。</span><br><span class="line">执行 <span class="built_in">sudo</span> systemctl start frpc 来启动服务。</span><br><span class="line">执行 <span class="built_in">sudo</span> systemctl status frpc 来查看服务状态和日志。</span><br></pre></td></tr></table></figure>
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2024/11/05/%E4%BD%BF%E7%94%A8%E4%BA%91%E6%9C%8D%E5%8A%A1%E8%BF%9B%E8%A1%8C%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-hello-world" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2024/11/05/hello-world/">Hello World</a>
-    </h1>
-  
-
-        
-        <a href="/2024/11/05/hello-world/" class="archive-article-date">
-  	<time datetime="2024-11-05T14:34:16.669Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2024-11-05</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy </span><br></pre></td></tr></table></figure>
-
-<p>快捷更新</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo clean &amp;&amp; hexo g &amp;&amp; hexo d</span><br></pre></td></tr></table></figure>
-
-<h3 id="解决网络问题"><a href="#解决网络问题" class="headerlink" title="解决网络问题"></a>解决网络问题</h3><ol>
-<li><p>我使用的是clash软件</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global http.proxy http://127.0.0.1:7890</span><br><span class="line">git config --global https.proxy http://127.0.0.1:7890</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>验证代理配置<br>可以通过以下命令查看当前的 Git 配置，确认代理是否已正确设置：</p>
-</li>
-</ol>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global --get http.proxy</span><br><span class="line">git config --global --get https.proxy</span><br></pre></td></tr></table></figure>
-
-<ol start="3">
-<li><p>取消代理配置<br>如果你需要取消代理配置，可以使用以下命令：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global --<span class="built_in">unset</span> http.proxy</span><br><span class="line">git config --global --<span class="built_in">unset</span> https.proxy</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>临时使用代理<br>如果只想在当前会话中临时使用代理，可以在运行 Git 命令时指定代理：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">http_proxy=http://127.0.0.1:7890 https_proxy=http://127.0.0.1:7890 git push origin master</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-</li>
-</ol>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">hexo</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2024/11/05/hello-world/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-  
 
 
           </div>
@@ -794,9 +275,9 @@
     <script>
 	var yiliaConfig = {
 		mathjax: true,
-		isHome: true,
+		isHome: false,
 		isPost: false,
-		isArchive: false,
+		isArchive: true,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
